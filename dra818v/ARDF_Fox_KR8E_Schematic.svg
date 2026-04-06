@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640">
+  <rect width="900" height="640" fill="white"/>
+  <!-- Title -->
+  <text x="450" y="32" font-family="Arial" font-size="18" font-weight="bold" fill="#1F4E79" text-anchor="middle">ARDF Fox Transmitter — KR8E — Wiring Schematic</text>
+  <text x="450" y="50" font-family="Arial" font-size="12" fill="#555" text-anchor="middle">XIAO ESP32C3 + DRA818V  |  2m VHF 144.500 MHz  |  18650 LiPo battery</text>
+  <line x1="40" y1="58" x2="860" y2="58" stroke="#1F4E79" stroke-width="2"/>
+
+  <!-- ═══ XIAO ESP32C3 ═══ -->
+  <rect x="60" y="80" width="200" height="420" rx="10" fill="#D6E4F0" stroke="#1F4E79" stroke-width="2"/>
+  <rect x="60" y="80" width="200" height="30" rx="10" fill="#1F4E79"/>
+  <rect x="60" y="100" width="200" height="10" fill="#1F4E79"/>
+  <text x="160" y="100" font-family="Arial" font-size="13" font-weight="bold" fill="white" text-anchor="middle">XIAO ESP32C3</text>
+
+  <!-- XIAO pins — left side labels + dots -->
+  <!-- 3V3 -->
+  <circle cx="60" cy="145" r="5" fill="#E24B4A"/>
+  <text x="70" y="149" font-family="Arial" font-size="11" fill="#333">3V3  (regulated out)</text>
+  <!-- GND -->
+  <circle cx="60" cy="175" r="5" fill="#555"/>
+  <text x="70" y="179" font-family="Arial" font-size="11" fill="#333">GND</text>
+  <!-- D4 / GPIO4 TX -->
+  <circle cx="60" cy="205" r="5" fill="#185FA5"/>
+  <text x="70" y="209" font-family="Arial" font-size="11" fill="#333">D4 / GPIO4  UART1-TX</text>
+  <!-- D5 / GPIO5 RX -->
+  <circle cx="60" cy="235" r="5" fill="#0F6E56"/>
+  <text x="70" y="239" font-family="Arial" font-size="11" fill="#333">D5 / GPIO5  UART1-RX</text>
+  <!-- D6 PTT -->
+  <circle cx="60" cy="265" r="5" fill="#854F0B"/>
+  <text x="70" y="269" font-family="Arial" font-size="11" fill="#333">D6 / GPIO6  PTT</text>
+  <!-- D7 SLP -->
+  <circle cx="60" cy="295" r="5" fill="#888"/>
+  <text x="70" y="299" font-family="Arial" font-size="11" fill="#333">D7 / GPIO7  PD/Sleep</text>
+  <!-- D9 AUDIO -->
+  <circle cx="60" cy="325" r="5" fill="#993C1D"/>
+  <text x="70" y="329" font-family="Arial" font-size="11" fill="#333">D9 / GPIO9  Audio PWM</text>
+  <!-- D2 HL -->
+  <circle cx="60" cy="355" r="5" fill="#3B6D11"/>
+  <text x="70" y="359" font-family="Arial" font-size="11" fill="#333">D2 / GPIO2  HL (power)</text>
+  <!-- D10 LED -->
+  <circle cx="60" cy="385" r="5" fill="#BA7517"/>
+  <text x="70" y="389" font-family="Arial" font-size="11" fill="#333">D10 / GPIO10  LED</text>
+  <!-- D3 BTN -->
+  <circle cx="60" cy="415" r="5" fill="#633"/>
+  <text x="70" y="419" font-family="Arial" font-size="11" fill="#333">D3 / GPIO3  Button</text>
+  <!-- BAT+ -->
+  <circle cx="60" cy="460" r="5" fill="#E24B4A"/>
+  <text x="70" y="464" font-family="Arial" font-size="11" fill="#333">BAT+  (3.7V in)</text>
+  <circle cx="60" cy="480" r="5" fill="#555"/>
+  <text x="70" y="484" font-family="Arial" font-size="11" fill="#333">GND  (battery −)</text>
+
+  <!-- ═══ DRA818V ═══ -->
+  <rect x="580" y="80" width="200" height="320" rx="10" fill="#E2F0D9" stroke="#1D5C37" stroke-width="2"/>
+  <rect x="580" y="80" width="200" height="30" rx="10" fill="#1D5C37"/>
+  <rect x="580" y="100" width="200" height="10" fill="#1D5C37"/>
+  <text x="680" y="100" font-family="Arial" font-size="13" font-weight="bold" fill="white" text-anchor="middle">DRA818V</text>
+  <text x="680" y="118" font-family="Arial" font-size="10" fill="#1D5C37" text-anchor="middle">134–174 MHz VHF, 3.3V, UART</text>
+
+  <!-- DRA pins — right side dots + labels -->
+  <!-- VCC -->
+  <circle cx="780" cy="145" r="5" fill="#E24B4A"/>
+  <text x="770" y="149" font-family="Arial" font-size="11" fill="#333" text-anchor="end">VCC (3.3V)</text>
+  <!-- GND -->
+  <circle cx="780" cy="175" r="5" fill="#555"/>
+  <text x="770" y="179" font-family="Arial" font-size="11" fill="#333" text-anchor="end">GND</text>
+  <!-- RXD -->
+  <circle cx="780" cy="205" r="5" fill="#185FA5"/>
+  <text x="770" y="209" font-family="Arial" font-size="11" fill="#333" text-anchor="end">RXD (config in)</text>
+  <!-- TXD -->
+  <circle cx="780" cy="235" r="5" fill="#0F6E56"/>
+  <text x="770" y="239" font-family="Arial" font-size="11" fill="#333" text-anchor="end">TXD (config out)</text>
+  <!-- PTT -->
+  <circle cx="780" cy="265" r="5" fill="#854F0B"/>
+  <text x="770" y="269" font-family="Arial" font-size="11" fill="#333" text-anchor="end">PTT (active LOW)</text>
+  <!-- PD -->
+  <circle cx="780" cy="295" r="5" fill="#888"/>
+  <text x="770" y="299" font-family="Arial" font-size="11" fill="#333" text-anchor="end">PD (active LOW)</text>
+  <!-- MIC -->
+  <circle cx="780" cy="325" r="5" fill="#993C1D"/>
+  <text x="770" y="329" font-family="Arial" font-size="11" fill="#333" text-anchor="end">MIC (audio in)</text>
+  <!-- HL -->
+  <circle cx="780" cy="355" r="5" fill="#3B6D11"/>
+  <text x="770" y="359" font-family="Arial" font-size="11" fill="#333" text-anchor="end">HL (H=0.5W, L=1W)</text>
+  <!-- RF OUT -->
+  <circle cx="780" cy="385" r="5" fill="#A32D2D"/>
+  <text x="770" y="389" font-family="Arial" font-size="11" fill="#333" text-anchor="end">RF_OUT → LPF</text>
+
+  <!-- ═══ CONNECTION WIRES ═══ -->
+  <!-- 3V3 → VCC (red) -->
+  <polyline points="60,145 35,145 35,145 35,145" fill="none" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="60" y1="145" x2="20" y2="145" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="20" y1="145" x2="20" y2="555" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="820" y1="555" x2="820" y2="145" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="820" y1="145" x2="780" y2="145" stroke="#E24B4A" stroke-width="1.5"/>
+  <text x="450" y="558" font-family="Arial" font-size="10" fill="#A32D2D" text-anchor="middle">3.3V power rail</text>
+  <line x1="20" y1="555" x2="820" y2="555" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- GND (black/gray) -->
+  <line x1="60" y1="175" x2="30" y2="175" stroke="#555" stroke-width="1.5"/>
+  <line x1="30" y1="175" x2="30" y2="570" stroke="#555" stroke-width="1.5"/>
+  <line x1="825" y1="570" x2="825" y2="175" stroke="#555" stroke-width="1.5"/>
+  <line x1="825" y1="175" x2="780" y2="175" stroke="#555" stroke-width="1.5"/>
+  <line x1="30" y1="570" x2="825" y2="570" stroke="#555" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="450" y="582" font-family="Arial" font-size="10" fill="#555" text-anchor="middle">GND rail</text>
+
+  <!-- D4 TX → RXD (blue) -->
+  <line x1="60" y1="205" x2="390" y2="205" stroke="#185FA5" stroke-width="1.5"/>
+  <line x1="390" y1="205" x2="780" y2="205" stroke="#185FA5" stroke-width="1.5"/>
+  <text x="430" y="200" font-family="Arial" font-size="10" fill="#185FA5" text-anchor="middle">UART TX→RXD</text>
+
+  <!-- D5 RX ← TXD (green) -->
+  <line x1="60" y1="235" x2="780" y2="235" stroke="#0F6E56" stroke-width="1.5"/>
+  <text x="430" y="230" font-family="Arial" font-size="10" fill="#0F6E56" text-anchor="middle">UART RX←TXD</text>
+
+  <!-- PTT (amber) -->
+  <line x1="60" y1="265" x2="780" y2="265" stroke="#854F0B" stroke-width="1.5"/>
+  <text x="430" y="260" font-family="Arial" font-size="10" fill="#854F0B" text-anchor="middle">PTT (active LOW)</text>
+
+  <!-- PD (gray) -->
+  <line x1="60" y1="295" x2="780" y2="295" stroke="#888" stroke-width="1.5"/>
+  <text x="430" y="290" font-family="Arial" font-size="10" fill="#555" text-anchor="middle">PD sleep</text>
+
+  <!-- AUDIO with divider (orange-red) -->
+  <line x1="60" y1="325" x2="380" y2="325" stroke="#993C1D" stroke-width="1.5"/>
+  <!-- Divider symbol -->
+  <rect x="380" y="308" width="55" height="16" rx="3" fill="#FFF2CC" stroke="#BA7517" stroke-width="1"/>
+  <text x="407" y="319" font-family="Arial" font-size="9" fill="#854F0B" text-anchor="middle">10kΩ</text>
+  <!-- R2 to GND -->
+  <rect x="380" y="328" width="55" height="16" rx="3" fill="#FFF2CC" stroke="#BA7517" stroke-width="1"/>
+  <text x="407" y="339" font-family="Arial" font-size="9" fill="#854F0B" text-anchor="middle">10kΩ</text>
+  <line x1="407" y1="344" x2="407" y2="358" stroke="#555" stroke-width="1"/>
+  <line x1="400" y1="358" x2="414" y2="358" stroke="#555" stroke-width="1"/>
+  <line x1="403" y1="362" x2="411" y2="362" stroke="#555" stroke-width="1"/>
+  <line x1="406" y1="366" x2="409" y2="366" stroke="#555" stroke-width="1"/>
+  <!-- wire from divider to MIC -->
+  <line x1="435" y1="316" x2="780" y2="325" stroke="#993C1D" stroke-width="1.5"/>
+  <text x="600" y="312" font-family="Arial" font-size="10" fill="#993C1D" text-anchor="middle">~600mV audio to MIC</text>
+
+  <!-- HL (green) -->
+  <line x1="60" y1="355" x2="780" y2="355" stroke="#3B6D11" stroke-width="1.5"/>
+  <text x="430" y="350" font-family="Arial" font-size="10" fill="#3B6D11" text-anchor="middle">HL power select</text>
+
+  <!-- LED (amber) — goes down to LED symbol below XIAO -->
+  <line x1="60" y1="385" x2="40" y2="385" stroke="#BA7517" stroke-width="1.5"/>
+
+  <!-- ═══ BATTERY ═══ -->
+  <rect x="310" y="425" width="150" height="110" rx="8" fill="#FFF8E1" stroke="#BA7517" stroke-width="2"/>
+  <text x="385" y="447" font-family="Arial" font-size="12" font-weight="bold" fill="#854F0B" text-anchor="middle">18650 LiPo</text>
+  <text x="385" y="462" font-family="Arial" font-size="10" fill="#854F0B" text-anchor="middle">3.7V / 2500–3500 mAh</text>
+  <text x="385" y="476" font-family="Arial" font-size="10" fill="#633" text-anchor="middle">Protected cell required</text>
+  <!-- + terminal -->
+  <circle cx="340" cy="500" r="6" fill="#E24B4A"/>
+  <text x="340" y="520" font-family="Arial" font-size="10" fill="#A32D2D" text-anchor="middle">BAT+</text>
+  <!-- − terminal -->
+  <circle cx="430" cy="500" r="6" fill="#555"/>
+  <text x="430" y="520" font-family="Arial" font-size="10" fill="#555" text-anchor="middle">GND</text>
+  <!-- Connect to XIAO BAT+ -->
+  <line x1="340" y1="506" x2="340" y2="535" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="340" y1="535" x2="60" y2="535" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="60" y1="535" x2="60" y2="460" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="60" y1="460" x2="60" y2="460" stroke="#E24B4A" stroke-width="1.5"/>
+  <!-- Connect − to GND -->
+  <line x1="430" y1="506" x2="430" y2="540" stroke="#555" stroke-width="1.5"/>
+  <line x1="430" y1="540" x2="60" y2="540" stroke="#555" stroke-width="1.5"/>
+  <line x1="60" y1="540" x2="60" y2="480" stroke="#555" stroke-width="1.5"/>
+
+  <!-- ═══ LPF BOX ═══ -->
+  <rect x="580" y="420" width="200" height="80" rx="8" fill="#E8F4FF" stroke="#185FA5" stroke-width="2"/>
+  <text x="680" y="445" font-family="Arial" font-size="12" font-weight="bold" fill="#185FA5" text-anchor="middle">7-Element LPF</text>
+  <text x="680" y="460" font-family="Arial" font-size="10" fill="#185FA5" text-anchor="middle">C1-L1-C2-L2-C3-L3-C4</text>
+  <text x="680" y="474" font-family="Arial" font-size="10" fill="#333" text-anchor="middle">50Ω, cutoff 160 MHz</text>
+  <text x="680" y="488" font-family="Arial" font-size="10" fill="#A32D2D" text-anchor="middle">→ SMA → Antenna</text>
+  <!-- RF path from DRA818V RF_OUT down to LPF -->
+  <line x1="780" y1="385" x2="820" y2="385" stroke="#A32D2D" stroke-width="2"/>
+  <line x1="820" y1="385" x2="820" y2="460" stroke="#A32D2D" stroke-width="2"/>
+  <line x1="820" y1="460" x2="780" y2="460" stroke="#A32D2D" stroke-width="2"/>
+  <text x="840" y="425" font-family="Arial" font-size="10" fill="#A32D2D" text-anchor="middle" transform="rotate(90,840,425)">RF OUT</text>
+
+  <!-- LED + resistor (bottom left) -->
+  <rect x="40" y="390" width="55" height="15" rx="3" fill="#FFF2CC" stroke="#BA7517" stroke-width="1"/>
+  <text x="67" y="400" font-family="Arial" font-size="9" fill="#854F0B" text-anchor="middle">330Ω</text>
+  <!-- LED symbol -->
+  <polygon points="95,385 110,392 95,400" fill="#BA7517" stroke="#BA7517" stroke-width="1"/>
+  <line x1="110" y1="384" x2="110" y2="400" stroke="#854F0B" stroke-width="1.5"/>
+  <line x1="110" y1="400" x2="110" y2="415" stroke="#555" stroke-width="1"/>
+  <!-- GND for LED -->
+  <line x1="110" y1="415" x2="110" y2="425" stroke="#555" stroke-width="1"/>
+  <line x1="103" y1="425" x2="117" y2="425" stroke="#555" stroke-width="1"/>
+  <line x1="106" y1="429" x2="114" y2="429" stroke="#555" stroke-width="1"/>
+  <line x1="109" y1="433" x2="112" y2="433" stroke="#555" stroke-width="1"/>
+  <text x="67" y="430" font-family="Arial" font-size="9" fill="#555" text-anchor="middle">STATUS LED</text>
+
+  <!-- Button -->
+  <line x1="60" y1="415" x2="40" y2="415" stroke="#633" stroke-width="1.5"/>
+  <rect x="15" y="408" width="25" height="14" rx="3" fill="#FFE0E0" stroke="#633" stroke-width="1"/>
+  <text x="27" y="418" font-family="Arial" font-size="8" fill="#633" text-anchor="middle">BTN</text>
+  <line x1="15" y1="415" x2="10" y2="415" stroke="#555" stroke-width="1"/>
+  <line x1="10" y1="415" x2="10" y2="430" stroke="#555" stroke-width="1"/>
+  <text x="8" y="440" font-family="Arial" font-size="8" fill="#555" text-anchor="middle">GND</text>
+
+  <!-- USB-C charge note -->
+  <rect x="120" y="490" width="140" height="36" rx="6" fill="#E8F4FF" stroke="#185FA5" stroke-width="1"/>
+  <text x="190" y="506" font-family="Arial" font-size="10" fill="#185FA5" text-anchor="middle">USB-C charging</text>
+  <text x="190" y="519" font-family="Arial" font-size="9" fill="#555" text-anchor="middle">500mA via XIAO MCP73831</text>
+
+  <!-- Legend -->
+  <rect x="60" y="596" width="780" height="32" rx="5" fill="#F5F5F5" stroke="#CCC" stroke-width="1"/>
+  <text x="90" y="614" font-family="Arial" font-size="10" fill="#333">Wire colors:  </text>
+  <line x1="155" y1="610" x2="185" y2="610" stroke="#E24B4A" stroke-width="2"/><text x="188" y="614" font-family="Arial" font-size="10" fill="#333">3.3V power  </text>
+  <line x1="255" y1="610" x2="285" y2="610" stroke="#555" stroke-width="2"/><text x="288" y="614" font-family="Arial" font-size="10" fill="#333">GND  </text>
+  <line x1="315" y1="610" x2="345" y2="610" stroke="#185FA5" stroke-width="2"/><text x="348" y="614" font-family="Arial" font-size="10" fill="#333">UART  </text>
+  <line x1="385" y1="610" x2="415" y2="610" stroke="#854F0B" stroke-width="2"/><text x="418" y="614" font-family="Arial" font-size="10" fill="#333">PTT  </text>
+  <line x1="445" y1="610" x2="475" y2="610" stroke="#993C1D" stroke-width="2"/><text x="478" y="614" font-family="Arial" font-size="10" fill="#333">Audio  </text>
+  <line x1="513" y1="610" x2="543" y2="610" stroke="#A32D2D" stroke-width="2"/><text x="546" y="614" font-family="Arial" font-size="10" fill="#333">RF path  </text>
+  <line x1="583" y1="610" x2="613" y2="610" stroke="#3B6D11" stroke-width="2"/><text x="616" y="614" font-family="Arial" font-size="10" fill="#333">Power select</text>
+
+</svg>

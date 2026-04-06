@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" width="980" height="720">
+  <rect width="980" height="720" fill="white"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="980" height="62" fill="#1F4E79"/>
+  <text x="490" y="24" font-family="Arial" font-size="17" font-weight="bold" fill="white" text-anchor="middle">ARDF Fox Transmitter — KR8E (BaoFeng Fork)</text>
+  <text x="490" y="46" font-family="Arial" font-size="12" fill="#A8C8E8" text-anchor="middle">XIAO ESP32C3 + BaoFeng HT via K1 Speaker-Mic Port  |  2m VHF  |  18650 LiPo</text>
+
+  <!-- ═══ XIAO ESP32C3 ═══ -->
+  <rect x="50" y="90" width="205" height="390" rx="10" fill="#D6E4F0" stroke="#1F4E79" stroke-width="2"/>
+  <rect x="50" y="90" width="205" height="28" rx="10" fill="#1F4E79"/>
+  <rect x="50" y="108" width="205" height="10" fill="#1F4E79"/>
+  <text x="152" y="108" font-family="Arial" font-size="13" font-weight="bold" fill="white" text-anchor="middle">XIAO ESP32C3</text>
+  <text x="152" y="128" font-family="Arial" font-size="9" fill="#1F4E79" text-anchor="middle">No UART — no radio config needed</text>
+
+  <!-- XIAO pin rows -->
+  <circle cx="50" cy="158" r="5" fill="#E24B4A"/>
+  <text x="62" y="162" font-family="Arial" font-size="11" fill="#333">3V3  (not used for radio)</text>
+
+  <circle cx="50" cy="185" r="5" fill="#555"/>
+  <text x="62" y="189" font-family="Arial" font-size="11" fill="#333">GND  (shared with BaoFeng)</text>
+
+  <circle cx="50" cy="212" r="5" fill="#854F0B"/>
+  <text x="62" y="216" font-family="Arial" font-size="11" fill="#333">D6 / GPIO6  PTT drive</text>
+
+  <circle cx="50" cy="239" r="5" fill="#993C1D"/>
+  <text x="62" y="243" font-family="Arial" font-size="11" fill="#333">D9 / GPIO9  Audio PWM</text>
+
+  <circle cx="50" cy="266" r="5" fill="#BA7517"/>
+  <text x="62" y="270" font-family="Arial" font-size="11" fill="#333">D10 / GPIO10  LED</text>
+
+  <circle cx="50" cy="293" r="5" fill="#633"/>
+  <text x="62" y="297" font-family="Arial" font-size="11" fill="#333">D3 / GPIO3  Test button</text>
+
+  <circle cx="50" cy="350" r="5" fill="#E24B4A"/>
+  <text x="62" y="354" font-family="Arial" font-size="11" fill="#333">BAT+  (18650 positive)</text>
+
+  <circle cx="50" cy="373" r="5" fill="#555"/>
+  <text x="62" y="377" font-family="Arial" font-size="11" fill="#333">GND  (18650 negative)</text>
+
+  <text x="152" y="410" font-family="Arial" font-size="9" fill="#555" text-anchor="middle">USB-C → programs + charges</text>
+  <rect x="100" y="418" width="105" height="18" rx="4" fill="#E8F4FF" stroke="#185FA5" stroke-width="1"/>
+  <text x="152" y="430" font-family="Arial" font-size="9" fill="#185FA5" text-anchor="middle">USB-C port (accessible)</text>
+  <rect x="82" y="442" width="140" height="18" rx="4" fill="#E8F4FF" stroke="#185FA5" stroke-width="1"/>
+  <text x="152" y="454" font-family="Arial" font-size="9" fill="#185FA5" text-anchor="middle">MCP73831 500mA charge IC onboard</text>
+
+  <!-- ═══ NPN TRANSISTOR (PTT switch) ═══ -->
+  <rect x="310" y="185" width="120" height="80" rx="8" fill="#FFF8E1" stroke="#BA7517" stroke-width="1.5"/>
+  <text x="370" y="208" font-family="Arial" font-size="11" font-weight="bold" fill="#854F0B" text-anchor="middle">2N3904 NPN</text>
+  <text x="370" y="222" font-family="Arial" font-size="10" fill="#854F0B" text-anchor="middle">PTT switch</text>
+  <!-- B label -->
+  <circle cx="320" cy="238" r="4" fill="#854F0B"/>
+  <text x="326" y="242" font-family="Arial" font-size="9" fill="#854F0B">B (base)</text>
+  <!-- C label -->
+  <circle cx="420" cy="205" r="4" fill="#185FA5"/>
+  <text x="390" y="202" font-family="Arial" font-size="9" fill="#185FA5">C (collector)</text>
+  <!-- E label -->
+  <circle cx="420" cy="255" r="4" fill="#555"/>
+  <text x="390" y="266" font-family="Arial" font-size="9" fill="#555">E (emitter) → GND</text>
+
+  <!-- Base resistor 1kΩ -->
+  <rect x="248" y="231" width="58" height="14" rx="3" fill="#FFF2CC" stroke="#BA7517" stroke-width="1"/>
+  <text x="277" y="241" font-family="Arial" font-size="9" fill="#854F0B" text-anchor="middle">1 kΩ</text>
+
+  <!-- PTT wire: D6 → resistor → base -->
+  <line x1="50" y1="212" x2="30" y2="212" stroke="#854F0B" stroke-width="1.5"/>
+  <line x1="30" y1="212" x2="30" y2="238" stroke="#854F0B" stroke-width="1.5"/>
+  <line x1="30" y1="238" x2="248" y2="238" stroke="#854F0B" stroke-width="1.5"/>
+  <line x1="306" y1="238" x2="320" y2="238" stroke="#854F0B" stroke-width="1.5"/>
+
+  <!-- Emitter to GND -->
+  <line x1="420" y1="255" x2="420" y2="280" stroke="#555" stroke-width="1.5"/>
+  <line x1="413" y1="280" x2="427" y2="280" stroke="#555" stroke-width="1.5"/>
+  <line x1="416" y1="285" x2="424" y2="285" stroke="#555" stroke-width="1.5"/>
+  <line x1="419" y1="290" x2="422" y2="290" stroke="#555" stroke-width="1.5"/>
+
+  <!-- ═══ AUDIO DIVIDER ═══ -->
+  <rect x="310" y="310" width="120" height="75" rx="8" fill="#FFF8E1" stroke="#993C1D" stroke-width="1.5"/>
+  <text x="370" y="330" font-family="Arial" font-size="11" font-weight="bold" fill="#993C1D" text-anchor="middle">Audio divider</text>
+  <!-- R1 -->
+  <rect x="330" y="340" width="80" height="14" rx="3" fill="#FFEEDD" stroke="#993C1D" stroke-width="1"/>
+  <text x="370" y="350" font-family="Arial" font-size="9" fill="#7B2A0A" text-anchor="middle">R1 = 10 kΩ (series)</text>
+  <!-- R2 -->
+  <rect x="330" y="358" width="80" height="14" rx="3" fill="#FFEEDD" stroke="#993C1D" stroke-width="1"/>
+  <text x="370" y="368" font-family="Arial" font-size="9" fill="#7B2A0A" text-anchor="middle">R2 = 10 kΩ (to GND)</text>
+  <!-- GND for R2 -->
+  <line x1="370" y1="372" x2="370" y2="385" stroke="#555" stroke-width="1"/>
+  <line x1="363" y1="385" x2="377" y2="385" stroke="#555" stroke-width="1"/>
+  <line x1="366" y1="389" x2="374" y2="389" stroke="#555" stroke-width="1"/>
+  <line x1="369" y1="393" x2="372" y2="393" stroke="#555" stroke-width="1"/>
+
+  <!-- Audio wire: D9 → divider input -->
+  <line x1="50" y1="239" x2="28" y2="239" stroke="#993C1D" stroke-width="1.5"/>
+  <line x1="28" y1="239" x2="28" y2="347" stroke="#993C1D" stroke-width="1.5"/>
+  <line x1="28" y1="347" x2="310" y2="347" stroke="#993C1D" stroke-width="1.5"/>
+
+  <!-- Divider output label (right side of divider box) -->
+  <circle cx="430" cy="347" r="4" fill="#993C1D"/>
+  <text x="436" y="344" font-family="Arial" font-size="9" fill="#993C1D">~600mV to Mic+</text>
+
+  <!-- ═══ BAOFENG HT ═══ -->
+  <rect x="620" y="88" width="310" height="420" rx="12" fill="#E8F0E8" stroke="#1D5C37" stroke-width="2"/>
+  <rect x="620" y="88" width="310" height="30" rx="12" fill="#1D5C37"/>
+  <rect x="620" y="108" width="310" height="10" fill="#1D5C37"/>
+  <text x="775" y="108" font-family="Arial" font-size="14" font-weight="bold" fill="white" text-anchor="middle">BaoFeng HT</text>
+  <text x="775" y="125" font-family="Arial" font-size="10" fill="#1D5C37" text-anchor="middle">UV-5R / UV-82 / BF-F8HP / UV-5RA / BF-888S</text>
+  <text x="775" y="140" font-family="Arial" font-size="10" fill="#555" text-anchor="middle">Pre-programmed to ARDF frequency  |  VOX=OFF  |  NFM</text>
+
+  <!-- K1 connector diagram inside BaoFeng box -->
+  <!-- 3.5mm section -->
+  <rect x="635" y="160" width="280" height="110" rx="6" fill="#D4EDD4" stroke="#1D5C37" stroke-width="1"/>
+  <text x="775" y="178" font-family="Arial" font-size="11" font-weight="bold" fill="#1D5C37" text-anchor="middle">3.5mm TRS plug (larger)</text>
+  <!-- pins -->
+  <circle cx="660" cy="197" r="5" fill="#185FA5"/>
+  <text x="672" y="201" font-family="Arial" font-size="10" fill="#333">Tip    = Speaker +  (audio out, not used)</text>
+  <circle cx="660" cy="217" r="5" fill="#888"/>
+  <text x="672" y="221" font-family="Arial" font-size="10" fill="#333">Ring   = RX audio   (not used)</text>
+  <circle cx="660" cy="237" r="5" fill="#555"/>
+  <text x="672" y="241" font-family="Arial" font-size="10" fill="#333" font-weight="bold">Sleeve = GND / PTT  ← connect here</text>
+  <circle cx="660" cy="257" r="5" fill="#555" opacity="0.3"/>
+  <text x="672" y="261" font-family="Arial" font-size="9" fill="#888">  (also ties to 2.5mm sleeve for PTT)</text>
+
+  <!-- 2.5mm section -->
+  <rect x="635" y="282" width="280" height="115" rx="6" fill="#C8E6C8" stroke="#1D5C37" stroke-width="1"/>
+  <text x="775" y="300" font-family="Arial" font-size="11" font-weight="bold" fill="#1D5C37" text-anchor="middle">2.5mm TRS plug (smaller)</text>
+  <circle cx="660" cy="317" r="5" fill="#E24B4A" opacity="0.4"/>
+  <text x="672" y="321" font-family="Arial" font-size="10" fill="#888">Tip    = +V bias (3–5V from radio; leave unconnected)</text>
+  <circle cx="660" cy="337" r="5" fill="#993C1D"/>
+  <text x="672" y="341" font-family="Arial" font-size="10" fill="#333" font-weight="bold">Ring   = Mic +  ← audio tone in here</text>
+  <circle cx="660" cy="357" r="5" fill="#555"/>
+  <text x="672" y="361" font-family="Arial" font-size="10" fill="#333" font-weight="bold">Sleeve = GND / PTT  ← short to 3.5mm sleeve</text>
+  <text x="672" y="375" font-family="Arial" font-size="9" fill="#555">  NPN collector ties both sleeves together</text>
+  <text x="672" y="388" font-family="Arial" font-size="9" fill="#555">  When transistor ON → both sleeves = GND → TX</text>
+
+  <!-- BaoFeng power note -->
+  <rect x="635" y="408" width="280" height="70" rx="6" fill="#FFF8E1" stroke="#BA7517" stroke-width="1"/>
+  <text x="775" y="426" font-family="Arial" font-size="11" font-weight="bold" fill="#854F0B" text-anchor="middle">BaoFeng powered INDEPENDENTLY</text>
+  <text x="775" y="441" font-family="Arial" font-size="10" fill="#555" text-anchor="middle">Uses its own battery pack (BL-5 or BL-8)</text>
+  <text x="775" y="455" font-family="Arial" font-size="10" fill="#555" text-anchor="middle">Do NOT connect BaoFeng VCC to XIAO 3V3</text>
+  <text x="775" y="469" font-family="Arial" font-size="10" fill="#A32D2D" text-anchor="middle">Only GND and signal lines are shared</text>
+
+  <!-- ═══ CONNECTION WIRES (XIAO → BaoFeng K1) ═══ -->
+
+  <!-- GND bus wire: XIAO GND → shared GND node at center → NPN emitter + 3.5mm sleeve + 2.5mm sleeve via NPN -->
+  <line x1="50" y1="185" x2="22" y2="185" stroke="#555" stroke-width="1.5"/>
+  <line x1="22" y1="185" x2="22" y2="600" stroke="#555" stroke-width="1.5"/>
+  <line x1="22" y1="600" x2="870" y2="600" stroke="#555" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="870" y1="600" x2="870" y2="237" stroke="#555" stroke-width="1.5"/>
+  <line x1="870" y1="237" x2="940" y2="237" stroke="#555" stroke-width="1.5"/>
+  <text x="446" y="614" font-family="Arial" font-size="9" fill="#555" text-anchor="middle">Common GND bus (XIAO GND = BaoFeng sleeve GND)</text>
+
+  <!-- 3.5mm Sleeve ← GND (from right side of BaoFeng box to GND bus) -->
+  <line x1="940" y1="237" x2="940" y2="580" stroke="#555" stroke-width="1.5"/>
+  <line x1="940" y1="580" x2="870" y2="580" stroke="#555" stroke-width="1.5"/>
+
+  <!-- NPN collector → 3.5mm sleeve (via a node) AND 2.5mm sleeve -->
+  <!-- collector wire goes right to a junction, then splits up (3.5mm) and up-right (2.5mm) -->
+  <line x1="420" y1="205" x2="540" y2="205" stroke="#185FA5" stroke-width="1.5"/>
+  <!-- junction dot -->
+  <circle cx="540" cy="205" r="4" fill="#854F0B"/>
+  <!-- up to 3.5mm sleeve -->
+  <line x1="540" y1="205" x2="540" y2="237" stroke="#854F0B" stroke-width="1.5"/>
+  <line x1="540" y1="237" x2="620" y2="237" stroke="#854F0B" stroke-width="1.5"/>
+  <!-- down to 2.5mm sleeve -->
+  <line x1="540" y1="205" x2="540" y2="357" stroke="#854F0B" stroke-width="1.5"/>
+  <line x1="540" y1="357" x2="620" y2="357" stroke="#854F0B" stroke-width="1.5"/>
+  <!-- PTT label -->
+  <rect x="548" y="270" width="60" height="16" rx="3" fill="#FFF2CC" stroke="#BA7517" stroke-width="1"/>
+  <text x="578" y="281" font-family="Arial" font-size="9" fill="#854F0B" text-anchor="middle">PTT lines</text>
+
+  <!-- Mic+ wire: divider output → 2.5mm Ring -->
+  <line x1="430" y1="347" x2="570" y2="347" stroke="#993C1D" stroke-width="1.5"/>
+  <line x1="570" y1="347" x2="570" y2="337" stroke="#993C1D" stroke-width="1.5"/>
+  <line x1="570" y1="337" x2="620" y2="337" stroke="#993C1D" stroke-width="1.5"/>
+  <text x="555" y="326" font-family="Arial" font-size="9" fill="#993C1D" text-anchor="middle">Mic+ audio</text>
+
+  <!-- ═══ 18650 BATTERY ═══ -->
+  <rect x="100" y="520" width="200" height="100" rx="8" fill="#FFF8E1" stroke="#BA7517" stroke-width="2"/>
+  <text x="200" y="542" font-family="Arial" font-size="12" font-weight="bold" fill="#854F0B" text-anchor="middle">18650 LiPo (XIAO only)</text>
+  <text x="200" y="557" font-family="Arial" font-size="10" fill="#854F0B" text-anchor="middle">3.7V / 2500–3500 mAh</text>
+  <text x="200" y="571" font-family="Arial" font-size="10" fill="#633" text-anchor="middle">Protected cell required</text>
+  <circle cx="145" cy="590" r="6" fill="#E24B4A"/>
+  <text x="145" y="610" font-family="Arial" font-size="9" fill="#A32D2D" text-anchor="middle">BAT+</text>
+  <circle cx="255" cy="590" r="6" fill="#555"/>
+  <text x="255" y="610" font-family="Arial" font-size="9" fill="#555" text-anchor="middle">GND</text>
+  <!-- BAT+ wire up to XIAO -->
+  <line x1="145" y1="596" x2="145" y2="620" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="145" y1="620" x2="50" y2="620" stroke="#E24B4A" stroke-width="1.5"/>
+  <line x1="50" y1="620" x2="50" y2="350" stroke="#E24B4A" stroke-width="1.5"/>
+  <!-- GND wire to bus -->
+  <line x1="255" y1="596" x2="255" y2="630" stroke="#555" stroke-width="1.5"/>
+  <line x1="255" y1="630" x2="22" y2="630" stroke="#555" stroke-width="1.5"/>
+
+  <!-- ═══ LED + BUTTON (bottom left) ═══ -->
+  <!-- LED -->
+  <line x1="50" y1="266" x2="15" y2="266" stroke="#BA7517" stroke-width="1.5"/>
+  <rect x="15" y="259" width="35" height="13" rx="3" fill="#FFF2CC" stroke="#BA7517" stroke-width="1"/>
+  <text x="32" y="269" font-family="Arial" font-size="8" fill="#854F0B" text-anchor="middle">330Ω</text>
+  <!-- LED symbol -->
+  <!-- (simplified: small triangle+bar) -->
+  <polygon points="-3,259 12,266 -3,274" fill="none" stroke="#BA7517" stroke-width="1"/>
+  <line x1="12" y1="258" x2="12" y2="275" stroke="#854F0B" stroke-width="1.5"/>
+  <text x="4" y="285" font-family="Arial" font-size="8" fill="#BA7517" text-anchor="middle">LED</text>
+  <line x1="12" y1="275" x2="12" y2="295" stroke="#555" stroke-width="1"/>
+  <line x1="6" y1="295" x2="18" y2="295" stroke="#555" stroke-width="1"/>
+  <line x1="9" y1="299" x2="16" y2="299" stroke="#555" stroke-width="1"/>
+
+  <!-- Button -->
+  <line x1="50" y1="293" x2="15" y2="293" stroke="#633" stroke-width="1.5"/>
+  <rect x="-10" y="286" width="25" height="14" rx="3" fill="#FFE0E0" stroke="#633" stroke-width="1"/>
+  <text x="2" y="296" font-family="Arial" font-size="8" fill="#633" text-anchor="middle">BTN</text>
+  <line x1="-10" y1="293" x2="-16" y2="293" stroke="#555" stroke-width="1"/>
+  <line x1="-16" y1="293" x2="-16" y2="310" stroke="#555" stroke-width="1"/>
+
+  <!-- ═══ LEGEND ═══ -->
+  <rect x="50" y="655" width="880" height="52" rx="5" fill="#F5F5F5" stroke="#CCC" stroke-width="1"/>
+  <text x="70" y="672" font-family="Arial" font-size="10" font-weight="bold" fill="#333">Wire key:</text>
+  <line x1="125" y1="669" x2="155" y2="669" stroke="#854F0B" stroke-width="2"/>
+  <text x="158" y="673" font-family="Arial" font-size="10" fill="#333">PTT drive (NPN)</text>
+  <line x1="260" y1="669" x2="290" y2="669" stroke="#993C1D" stroke-width="2"/>
+  <text x="293" y="673" font-family="Arial" font-size="10" fill="#333">Audio (Mic+)</text>
+  <line x1="375" y1="669" x2="405" y2="669" stroke="#555" stroke-width="2"/>
+  <text x="408" y="673" font-family="Arial" font-size="10" fill="#333">GND bus</text>
+  <line x1="460" y1="669" x2="490" y2="669" stroke="#E24B4A" stroke-width="2"/>
+  <text x="493" y="673" font-family="Arial" font-size="10" fill="#333">Battery +</text>
+
+  <text x="70" y="696" font-family="Arial" font-size="10" font-weight="bold" fill="#A32D2D">Key differences from DRA818V version:</text>
+  <text x="240" y="696" font-family="Arial" font-size="10" fill="#333">No UART wires  |  No LPF needed (BaoFeng has internal filtering)  |  Frequency set on radio keypad  |  BaoFeng uses its own battery</text>
+</svg>
